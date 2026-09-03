@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
-
 func main() {
-	//var card string = "Ace of Spades"
-	card := newCard() //calling the newCard function and assigning its return value to the card variable
-	//card = "Five of Diamonds"
+	cards := deck{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
 
-	fmt.Println(card)
+	/* ...
+	now we call this from the deck.go file instead.
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+	*/
+
+	cards.print()
 }
 
-//defining helper function that gives us the five of diamonds
 func newCard() string {
 	return "Five of Diamonds"
 }
