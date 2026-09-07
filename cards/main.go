@@ -4,6 +4,13 @@ func main() {
 
 	cards := newDeck()
 
+	//hand, remainingCards := deal(cards, 5)
+
+	cards.print()
+
+	//hand.print()
+	//remainingCards.print()
+
 	/*cards := deck{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades")
 
@@ -12,8 +19,6 @@ func main() {
 		fmt.Println(i, card)
 	}
 	*/
-
-	cards.print()
 }
 
 /*

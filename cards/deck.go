@@ -26,3 +26,9 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+//new function to deal a hand of cards, we need a deck and hand size.
+//we can return multiple values in Go.
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
