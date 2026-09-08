@@ -1,29 +1,13 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	cards := newDeck()
+	fmt.Println(cards.toString())
 
-	//hand, remainingCards := deal(cards, 5)
-	hand, remainingCards := deal(cards, 5)
+	//greeting := "Hi there!"
+	//fmt.Println([]byte(greeting))
 
-	cards.print()
-
-	hand.print()
-	remainingCards.print()
-
-	/*cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
-
-	now we call this from the deck.go file instead.
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
-	*/
 }
-
-/*
-func newCard() string {
-	return "Five of Diamonds"
-}
-*/
