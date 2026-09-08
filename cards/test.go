@@ -1,1 +1,1 @@
-package cards
+package main

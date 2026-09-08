@@ -5,11 +5,12 @@ func main() {
 	cards := newDeck()
 
 	//hand, remainingCards := deal(cards, 5)
+	hand, remainingCards := deal(cards, 5)
 
 	cards.print()
 
-	//hand.print()
-	//remainingCards.print()
+	hand.print()
+	remainingCards.print()
 
 	/*cards := deck{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades")
