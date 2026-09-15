@@ -9,8 +9,8 @@ func TestNewDeck(t *testing.T) {
 	d := newDeck()
 
 	// chek that len is 16
-	if len(d) != 16 {
-		t.Errorf("Expected deck length of 16, but got %v", len(d))
+	if len(d) != 20 {
+		t.Errorf("Expected deck length of 20, but got %v", len(d))
 	}
 
 	// check that deck[0] is Ace of Spades
