@@ -2,32 +2,28 @@ package main
 
 import "fmt"
 
-//struct to represent a person
+//struct to represent contact information
+type contactInfo struct {
+	email   string
+	zipCode int
+}
 
+//struct to represent a person
 type person struct {
-	firstName string
-	lastName  string
+	firstName   string
+	lastName    string
+	contactInfo //embedding contactInfo struct into person struct
 }
 
 func main() {
-	//first approach to creating a person
-	barcaCoach := person{"Hansi", "Flick"}
-	fmt.Println(barcaCoach)
-
-	//second approach to creating a person
-	jackie := person{
-		firstName: "Jackie",
-		lastName:  "Chan",
+	jim := person{
+		firstName: "Jim",
+		lastName:  "Party",
+		contactInfo: contactInfo{
+			email:   "jim.party@example.com",
+			zipCode: 94000,
+		},
 	}
-	fmt.Println(jackie)
 
-	//third approach to creating a person
-	var cena person
-	fmt.Printf("%+v", cena)
-
-	//updating a struct
-	cena.firstName = "John"
-	cena.lastName = "Cena"
+	fmt.Printf("%+v", jim) //print the entire struct with field names
 }
-
-//next thing is embedding.
