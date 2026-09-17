@@ -25,5 +25,22 @@ func main() {
 		},
 	}
 
-	fmt.Printf("%+v", jim) //print the entire struct with field names
+	//fmt.Printf("%+v", jim) //print the entire struct with field names
+	jimPointer := &jim             //create a pointer to the jim struct
+	jimPointer.updateName("Jimmy") //now update the name using pointer receiver method
+	jim.print()
+
+}
+
+//this method has a value receiver, so it will not modify the original struct
+/*func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
+}*/
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	pointerToPerson.firstName = newFirstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }
